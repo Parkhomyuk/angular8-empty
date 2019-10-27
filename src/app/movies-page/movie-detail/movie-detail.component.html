@@ -1,0 +1,51 @@
+<div class="card" style="width: 18rem;">
+  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+  <div class="card-body">
+    <h5 class="card-title">{{movie.Title}}</h5>
+    <hr>
+    <div class="items">
+      <div class="info-item">
+        <span>Worldwide Gross:</span> {{movie.Worldwide_Gross}}
+
+      </div>     
+      
+        <div class="info-item" *ngIf="movie.US_DVD_Sales!=null">
+          <span>US DVD Sales:</span>     {{movie.US_DVD_Sales}}
+        </div>
+        <div class="info-item" *ngIf="movie.US_DVD_Sales==null">
+          <span> US DVD Sales:</span>  no data
+        </div>
+        <div class="info-item">         
+          <span>Production Budget:</span>   {{movie.Production_Budget}}
+        </div> 
+        <div class="info-item">         
+          <span>IMDB Rating:</span>   {{movie.IMDB_Rating}}
+        </div> 
+        <div class="info-item">         
+          <span>IMDB Votes:</span>   {{movie.IMDB_Votes}}
+        </div> 
+    </div>
+     
+       <hr>
+         
+    <a href="#" class="btn btn-primary">Go the details</a>
+  </div>
+</div>
+
+
+<!-- "Title":"The Land Girls",
+"US_Gross":146083,
+"Worldwide_Gross":146083,
+"US_DVD_Sales":null,
+"Production_Budget":8000000,
+"Release_Date":"Jun 12 1998",
+"MPAA_Rating":"R",
+"Running_Time_min":null,
+"Distributor":"Gramercy",
+"Source":null,
+"Major_Genre":null,
+"Creative_Type":null,
+"Director":null,
+"Rotten_Tomatoes_Rating":null,
+"IMDB_Rating":6.1,
+"IMDB_Votes":1071 -->

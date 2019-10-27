@@ -1,0 +1,16 @@
+<div class="main-content">
+   
+    <div *ngFor="let movie of movies; let i=index">
+      
+          <app-movie-detail [movie]="movie"></app-movie-detail>
+  
+      
+    </div>
+ 
+  </div>
+   
+  <div class="buttons">
+    <button class="btn btn-danger" (click)="sortByRating()">Sort by Rating from min to max</button>
+    <button class="btn btn-primary" (click)="sortByRating2()">Sort by Rating from max to min</button>
+  </div>
+  
