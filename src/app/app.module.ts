@@ -12,6 +12,7 @@ import { MoviesPageComponent } from './movies-page/movies-page.component';
 import { MovieDetailComponent } from './movies-page/movie-detail/movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { KayComponent } from './kay/kay.component';
+import { CalendarComponent } from './calendar/calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { KayComponent } from './kay/kay.component';
     TodoComponent,
     MoviesPageComponent,
     MovieDetailComponent,
-    KayComponent
+    KayComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
