@@ -13,6 +13,9 @@ import { MovieDetailComponent } from './movies-page/movie-detail/movie-detail.co
 import { HttpClientModule } from '@angular/common/http';
 import { KayComponent } from './kay/kay.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { FullCalendarComponent } from './full-calendar/full-calendar.component';
+
+import { FullCalendarModule } from '@fullcalendar/angular'; // for FullCalendar!
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +26,15 @@ import { CalendarComponent } from './calendar/calendar.component';
     MoviesPageComponent,
     MovieDetailComponent,
     KayComponent,
-    CalendarComponent
+    CalendarComponent,
+    FullCalendarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     KonvaModule,
-    HttpClientModule
+    HttpClientModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

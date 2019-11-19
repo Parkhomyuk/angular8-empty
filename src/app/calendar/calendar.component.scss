@@ -1,0 +1,166 @@
+@white: #626E7E;
+@light: lighten(@white, 40%);
+@light2: darken(@light, 3%);
+
+table{
+  font-family:sans-serif;
+		  width: 100%;
+		  border-spacing: 0;
+	  	border-collapse: separate;
+		  table-layout: fixed;
+		  margin-bottom: 50px;
+
+		  thead{
+			    tr{
+				      th{
+        					background: whitesmoke;
+					        color: black;
+					        padding: 0.5em;
+					        overflow: hidden;
+							font-size: 0.7rem;	
+        					&:first-child{
+						          border-radius:3px 0 0 0;
+					        } 
+					        &:last-child{
+						          border-radius:0 3px  0 0;
+					        }
+
+        					.day{
+						          display: block;
+						          font-size: 0.5rem;
+						          border-radius: 50%;
+					          		width: 30px;
+					          	height: 30px;
+						          margin: 0 auto 5px;
+						          padding: 5px;
+          line-height: 1.8;
+
+            						&.active{
+							              background: whitesmoke;
+							              color: grey;
+						            }
+					        }
+
+        					.short{
+						          display: none;
+					        }
+
+        					i{
+					          	vertical-align: middle;
+						          font-size: 2em;
+					        }
+				      }
+			    }
+		  }
+		  tbody{
+			    tr{
+				      background: white;
+
+      					&:nth-child(odd){
+						        background:lightgrey;
+				      	}
+					      &:nth-child(4n+0){
+						        td{
+							          border-bottom:1px solid grey;
+						        }
+					      }
+				      td{
+					        text-align: center;
+					        vertical-align: middle;
+					        border-left: 1px solid grey;
+					        position: relative;
+					        height: 32px;
+					        cursor: pointer;
+
+        					&:last-child{
+						          border-right:1px solid grey;
+					        }
+        &.hour{
+						          font-size: 2em;
+						          padding: 0;
+						          color: lightgray;
+						          background:#fff;
+					          	border-bottom:1px solid grey;
+						          border-collapse: separate;
+						          min-width: 100px;
+						          cursor: default;
+
+          						span{
+							            display: block;
+
+	          					}
+					        }  	
+				      }
+			    }
+		  }
+
+  		@media(max-width:60em){
+
+    			thead{
+				      tr{
+					        th{
+						          .long{
+							            display: none;
+						          }
+
+          						.short{
+							            display: block;
+						          }
+
+        					}
+				      }
+			    }
+
+    			tbody{
+				      tr{
+					        td{
+						          &.hour{
+							            span{
+								              transform:rotate(270deg);
+              -webkit-transform:rotate(270deg);
+              -moz-transform:rotate(270deg);
+							            }
+						          }
+        		}
+				      }
+			    }
+		  }
+
+	  	@media(max-width:27em){
+    			thead{
+				      tr{
+					        th{
+						          font-size: 65%;
+						          .day{
+							            display: block;
+							            font-size: 1.2em;
+							            border-radius: 50%;
+							            			width: 20px;
+							            height: 20px;
+							            margin: 0 auto 5px;
+							            padding: 5px;
+
+            							&.active{
+							              	background: white;
+								              color: grey;
+							            }
+						          }
+					        }
+				      }
+			    }
+			    tbody{
+				      tr{
+					        td{
+						          &.hour{
+							            font-size: 1.7em;
+							            span{
+							              transform:translateY(16px)rotate(270deg);
+              -webkit-transform:translateY(16px)rotate(270deg);
+              -moz-transform:translateY(16px)rotate(270deg);
+							            }
+						          }
+        	}
+				      }
+			    }
+		  }
+	}
